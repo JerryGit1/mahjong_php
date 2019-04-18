@@ -1,0 +1,71 @@
+[ 2018-06-01T19:20:15+08:00 ] ::1 /gm/GameGM_X18_demo.php/HomeGM/Index/open_id_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000782s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `gm_admin_userinfo` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `GAME_USER` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `GAME_USER` WHERE ( OPEN_ID='wsw-889' ) LIMIT 1   [ RunTime:0.0157s ]
+
+[ 2018-06-01T19:20:19+08:00 ] ::1 /gm/GameGM_X18_demo.php/HomeGM/Index/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+SQL: SHOW COLUMNS FROM `gm_admin_userinfo` [ RunTime:0.0119s ]
+SQL: SELECT * FROM `gm_admin_userinfo` WHERE ( loginName='AH_zhoudw' ) LIMIT 1   [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `gm_admin_userinfo` [ RunTime:0.0134s ]
+SQL: SELECT * FROM `gm_admin_userinfo` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.0148s ]
+ERR: {"id":"10000","createTime":"2018-05-11 14:04:39","userName":"\u5468\u9e4f\u658c\u5927\u738b","phone":"13126631266","loginName":"AH_zhoudw","loginPasswd":"13126631266","loginMD5Passwd":"060fc79653933835f46d91eb6653bbb8","login_ip":"0.0.0.0","login_token":"3b1051ef8764e42e600aa555334fbe5d","login_token_out_time":"2018-06-01 21:17:47","grade":"8","head":"1","binding_playerId":null,"money":"0","jlist":"[{\"name\":\"console\",\"list\":[]},{\"name\":\"jurisdiction\",\"list\":[\"list\",\"add\"]},{\"name\":\"game\",\"list\":[\"systemNotice\",\"feedback\",\"systemMessages\",\"monitor\",\"onlineRoom\"]},{\"name\":\"player\",\"list\":[\"list\",\"blacklist\",\"payRecord\",\"consumeRecord\",\"scoreRecord\",\"pay\"]},{\"name\":\"agency\",\"list\":[\"list\",\"add\",\"buyRecord\",\"sellRecord\",\"pay\",\"grade\",\"reduce\"]},{\"name\":\"jerry\",\"list\":[\"index\",\"add\",\"userList\",\"pay\",\"recordList\",\"seek\"]},{\"name\":\"fling\",\"list\":[\"list\",\"bindingUserList\",\"manage\",\"whitelist\",\"userAffiliation\"]}]","newTime":"2018-06-01 19:17:47","last_failure":null,"failure_num":null,"test_agency":null}
+SQL: SHOW COLUMNS FROM `gm_player_payrecord` [ RunTime:0.0095s ]
+NOTIC: [2] Creating default object from empty value D:\Chloe\my_local_pro\wamp\www\gm\GameGM_X18\HomeGM\Controller\IndexController.class.php 第 92 行.
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( p_uId=10000 ) LIMIT 1   [ RunTime:0.0148s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( state=2 AND p_uId=10000 ) LIMIT 1   [ RunTime:0.0141s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( state=1 AND a_uId=10000 ) LIMIT 1   [ RunTime:0.0137s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( state=2 AND a_uId=10000 ) LIMIT 1   [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `gm_admin_userinfo` [ RunTime:0.0133s ]
+SQL: UPDATE `gm_admin_userinfo` SET `login_ip`='0.0.0.0',`login_token`='e928bacda0884fd631ab68f128f0179c',`newTime`='2018-06-01 19:20:19',`login_token_out_time`='2018-06-01 21:20:19' WHERE ( id=10000 ) [ RunTime:0.0537s ]
+
+[ 2018-06-01T19:20:19+08:00 ] ::1 /gm/GameGM_X18_demo.php/HomeGM/Console/index_manage_center_page/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000783s ]
+SQL: SHOW COLUMNS FROM `gm_admin_userinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `gm_admin_userinfo` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `gm_admin_userinfo` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `gm_admin_userinfo` WHERE ( binding_playerId='10000' ) LIMIT 1   [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `gm_admin_userinfo` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `gm_player_payrecord` [ RunTime:0.0126s ]
+SQL: SHOW COLUMNS FROM `GAME_USER` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `gm_player_consumerecord` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `gm_admin_userinfo` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.0076s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( a_uId=10000 AND state!=3 ) LIMIT 1   [ RunTime:0.0048s ]
+SQL: SELECT * FROM `gm_admin_userinfo` WHERE ( id=10000 ) LIMIT 1   [ RunTime:0.0056s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( p_uId=10000 ) LIMIT 1   [ RunTime:0.0047s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( state=1 AND a_uId=10000 ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( state=2 AND a_uId=10000 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `GAME_USER` LIMIT 1   [ RunTime:0.0047s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `GAME_USER` WHERE ( SIGN_UP_TIME>1527696000000 AND SIGN_UP_TIME<1527782400000 ) LIMIT 1   [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `GAME_USER` WHERE ( SIGN_UP_TIME>1527436800000 AND SIGN_UP_TIME<1527782400000 ) LIMIT 1   [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `GAME_USER` WHERE ( SIGN_UP_TIME>1527782400000 AND SIGN_UP_TIME<1527782400000 ) LIMIT 1   [ RunTime:0.0041s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( state=1 AND UNIX_TIMESTAMP(createTime)<1527782400 ) LIMIT 1   [ RunTime:0.0053s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_consumerecord` WHERE ( type=100 AND createTime<1527782400000 ) LIMIT 1   [ RunTime:0.0040s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_consumerecord` WHERE ( createTime>1527696000000 AND createTime<1527782400000 ) LIMIT 1   [ RunTime:0.0093s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_consumerecord` WHERE ( createTime>1527436800000 AND createTime<1527782400000 ) LIMIT 1   [ RunTime:0.0101s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_consumerecord` WHERE ( createTime>1527782400000 AND createTime<1527782400000 ) LIMIT 1   [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gm_admin_userinfo` LIMIT 1   [ RunTime:0.0073s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gm_admin_userinfo` WHERE ( UNIX_TIMESTAMP(createTime)>1527696000 AND UNIX_TIMESTAMP(createTime)<1527782400 AND grade=4 ) LIMIT 1   [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gm_admin_userinfo` WHERE ( UNIX_TIMESTAMP(createTime)>1527436800 AND UNIX_TIMESTAMP(createTime)<1527782400 AND grade=4 ) LIMIT 1   [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gm_admin_userinfo` WHERE ( UNIX_TIMESTAMP(createTime)>1527782400 AND UNIX_TIMESTAMP(createTime)<1527782400 AND grade=4 ) LIMIT 1   [ RunTime:0.0041s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( state=2 AND UNIX_TIMESTAMP(createTime)<1527782400 ) LIMIT 1   [ RunTime:0.0044s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( state=2 AND UNIX_TIMESTAMP(createTime)>1527696000 AND UNIX_TIMESTAMP(createTime)<1527782400 AND a_uId=10001 ) LIMIT 1   [ RunTime:0.0104s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( state=2 AND UNIX_TIMESTAMP(createTime)>1527436800 AND UNIX_TIMESTAMP(createTime)<1527782400 AND a_uId=10001 ) LIMIT 1   [ RunTime:0.0057s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `gm_player_payrecord` WHERE ( state=2 AND UNIX_TIMESTAMP(createTime)>1527782400 AND UNIX_TIMESTAMP(createTime)<1527782400 AND a_uId=10001 ) LIMIT 1   [ RunTime:0.0070s ]
+
